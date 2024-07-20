@@ -1,5 +1,6 @@
 "use client";
 
+import { defaultUrl } from "@/utils/constants";
 import { createClient } from "@/utils/supabase/client";
 
 export const GoogleLogin = () => {
@@ -9,7 +10,7 @@ export const GoogleLogin = () => {
       await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `http://localhost:3000/auth/callback`,
+          redirectTo: `${defaultUrl}/auth/callback`,
         },
       })
   
