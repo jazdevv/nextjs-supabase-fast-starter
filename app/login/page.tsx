@@ -7,7 +7,7 @@ import { SubmitButton } from "./submit-button";
 import Script from "next/script";
 import dynamic from "next/dynamic";
 import { SupabaseClient } from "@supabase/supabase-js";
-import { GoogleLogin } from "./GoogleLogin";
+import { GoogleBtn } from "./GoogleBtn";
 
 export default function Login({
   searchParams,
@@ -121,28 +121,8 @@ export default function Login({
               {searchParams.message}
             </p>
           )}
-          <br />
-          <hr />
-          <Script src="https://accounts.google.com/gsi/client" async></Script>
-          {/* <div id="g_id_onload"
-            data-client_id="298437531730-lt0pe7hmakhjpcnk3a4p1bj0kf9mo0qt.apps.googleusercontent.com"
-            data-context="signin"
-            data-ux_mode="popup"
-            data-callback="handleSignInWithGoogle"
-            data-auto_prompt="false"
-            data-use_fedcm_for_prompt="true">
-          </div> */}
-
-          <div className="g_id_signin"
-          // data-type="standard"
-          // data-shape="rectangular"
-          // data-theme="outline"
-          // data-text="signin_with"
-          // data-size="large"
-          // data-logo_alignment="left">
-          >
-          </div>
-          <GoogleLogin />
+          <div className="border-b my-6"/>
+          <GoogleBtn />
         </form>
       </div>
   );
