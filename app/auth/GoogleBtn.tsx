@@ -3,9 +3,10 @@
 import { defaultUrl } from "@/utils/constants";
 import { createClient } from "@/utils/supabase/client";
 import { Button, Icon } from "@chakra-ui/react";
+import React from "react";
 import { FcGoogle } from "react-icons/fc";
 
-export const GoogleBtn = () => {
+export const GoogleBtn: React.FC = () => {
   const onClick = async () => {
     const supabase = createClient();
     await supabase.auth.signInWithOAuth({
